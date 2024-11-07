@@ -7,13 +7,13 @@ export const createPlaylist = async (
   res: Response
 ): Promise<any> => {
   const { name, description } = req.body;
-  const userId = (req as any).user.userId;
+  const userId = (req as any).userId;
 
   try {
     const newPlaylist: IPlaylist = new Playlist({
       name,
       description,
-      user: userId,
+      userId: userId,
       songs: [],
     });
 
@@ -31,7 +31,7 @@ export const getUserPlaylists = async (
   req: Request,
   res: Response
 ): Promise<any> => {
-  const userId = (req as any).user.userId;
+  const userId = (req as any).userId;
 
   const page = parseInt(req.query.page as string) || 1;
   const limit = parseInt(req.query.limit as string) || 10;
