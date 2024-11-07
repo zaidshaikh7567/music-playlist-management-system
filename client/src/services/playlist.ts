@@ -62,10 +62,14 @@ export const getAllPlaylists = async (page: number, limit: number) => {
   }
 };
 
-export const searchSong = async (query: string) => {
+export const searchSong = async (
+  query: string,
+  page: number,
+  limit: number
+) => {
   try {
     const response = await api.get(`/songs/search`, {
-      params: { query },
+      params: { query, page, limit },
     });
 
     return response.data;
