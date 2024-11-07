@@ -39,8 +39,8 @@ export const getUserPlaylists = async (
 
   try {
     const [totalPlaylists, playlists] = await Promise.all([
-      Playlist.countDocuments({ user: userId }),
-      Playlist.find({ user: userId }).skip(skip).limit(limit),
+      Playlist.countDocuments({ userId: userId }),
+      Playlist.find({ userId: userId }).skip(skip).limit(limit),
     ]);
 
     const totalPages = Math.ceil(totalPlaylists / limit);
