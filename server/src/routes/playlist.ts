@@ -6,7 +6,6 @@ import {
   updatePlaylist,
   deletePlaylist,
   addSongToPlaylist,
-  searchSongs,
 } from "../controllers/playlist";
 
 const router = express.Router();
@@ -20,7 +19,5 @@ router.put("/:playlistId", authenticate, updatePlaylist);
 router.delete("/:playlistId", authenticate, deletePlaylist);
 
 router.post("/:playlistId/songs", authenticate, addSongToPlaylist);
-
-router.get("/search", /* authenticate, */ searchSongs);
 
 export default router;
