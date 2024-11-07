@@ -8,8 +8,14 @@
     "build": "tsc -b && vite build"
   },
   "dependencies": {
+    "@hookform/resolvers": "^3.9.1",
+    "axios": "^1.7.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.53.1",
+    "react-router-dom": "^6.28.0",
+    "react-toastify": "^10.0.6",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/react": "^18.3.12",
