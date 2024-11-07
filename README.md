@@ -40,3 +40,5 @@ yarn install
 yarn dev
 
 ```
+
+open the http://localhost:5173 url in your browser
