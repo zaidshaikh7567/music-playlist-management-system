@@ -6,7 +6,7 @@ import User, { IUser } from "../models/user";
 
 const generateToken = (userId: string): string => {
   return jwt.sign({ id: userId }, config.jwtSecret, {
-    expiresIn: "1h",
+    expiresIn: "7d",
   });
 };
 
